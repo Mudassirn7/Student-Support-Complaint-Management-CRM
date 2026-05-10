@@ -26,6 +26,8 @@ A web-based CRM system built with ASP.NET Core Razor Pages and SQL Server.
 5. Open `http://localhost:5077`
 
 ## Project Structure
+
+```
 CRMProject/
 ├── Models/         → Student.cs, Complaint.cs
 ├── Pages/
@@ -33,3 +35,7 @@ CRMProject/
 │   └── Complaints/ → Index, Create, Edit, Delete
 ├── appsettings.json
 └── Program.cs
+```
+
+## Course
+BL3004 – Database Systems in Business | FAST-NUCES BSBA-6A
