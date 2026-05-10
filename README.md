@@ -19,8 +19,9 @@ A web-based CRM system built with ASP.NET Core Razor Pages and SQL Server.
 - Complaints
 
 ## How to Run
-1. Create database `CRMProjectDB` in SQL Server
-2. Run SQL scripts from `Database/` folder
+## How to Run
+1. Clone the repository
+2. Open `database.sql` in SSMS and run it
 3. Update connection string in `appsettings.json`
 4. Run `dotnet run` in terminal
 5. Open `http://localhost:5077`
