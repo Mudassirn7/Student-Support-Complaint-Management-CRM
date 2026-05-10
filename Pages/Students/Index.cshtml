@@ -1,0 +1,36 @@
+@page
+@model CRMProject.Pages.Students.IndexModel
+
+<div class="container mt-4">
+    <h2 class="mb-3" style="color: #00d4ff;">Students List</h2>
+    <a href="/Students/Create" class="btn btn-success mb-3">+ Add New Student</a>
+
+    <table class="table table-dark table-bordered table-hover text-center">
+        <thead style="background-color: #0f3460; color: #00d4ff;">
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Roll Number</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model.Students)
+            {
+                <tr>
+                    <td>@s.StudentId</td>
+                    <td>@s.FullName</td>
+                    <td>@s.Email</td>
+                    <td>@s.RollNumber</td>
+                    <td>@s.DepartmentName</td>
+                    <td>
+                        <a href="/Students/Edit?id=@s.StudentId" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/Students/Delete?id=@s.StudentId" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

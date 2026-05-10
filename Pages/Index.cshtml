@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 style="color: #00d4ff; font-weight: bold;">Student Support & Complaint Management CRM</h1>
+        <p style="color: #aaa;">National University of Computing & Emerging Sciences — BSBA-6A</p>
+        <hr style="border-color: #0f3460;" />
+    </div>
+
+    <div class="row justify-content-center g-4">
+        <div class="col-md-5">
+            <div class="card text-center h-100" style="background-color: #0f3460; border: 1px solid #00d4ff;">
+                <div class="card-body py-5">
+                    <h3 style="color: #00d4ff;">Students</h3>
+                    <p style="color: #ccc;">View, add, edit and delete student records.</p>
+                    <a href="/Students/Index" class="btn btn-primary mt-2">Manage Students</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card text-center h-100" style="background-color: #0f3460; border: 1px solid #e94560;">
+                <div class="card-body py-5">
+                    <h3 style="color: #e94560;">Complaints</h3>
+                    <p style="color: #ccc;">View, add, edit and delete student complaints.</p>
+                    <a href="/Complaints/Index" class="btn btn-danger mt-2">Manage Complaints</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

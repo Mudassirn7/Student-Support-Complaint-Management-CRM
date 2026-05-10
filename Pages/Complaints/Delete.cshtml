@@ -1,0 +1,9 @@
+@page
+@model CRMProject.Pages.Complaints.DeleteModel
+<h2>Delete Complaint</h2>
+<p>Are you sure you want to delete <strong>@Model.Complaint.Title</strong>?</p>
+<form method="post">
+    <input type="hidden" asp-for="Complaint.ComplaintId" />
+    <button type="submit">Yes, Delete</button>
+    <a href="/Complaints/Index">Cancel</a>
+</form>

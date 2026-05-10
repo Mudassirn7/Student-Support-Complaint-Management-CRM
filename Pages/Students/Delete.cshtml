@@ -1,0 +1,9 @@
+@page
+@model CRMProject.Pages.Students.DeleteModel
+<h2>Delete Student</h2>
+<p>Are you sure you want to delete <strong>@Model.Student.FullName</strong>?</p>
+<form method="post">
+    <input type="hidden" asp-for="Student.StudentId" />
+    <button type="submit">Yes, Delete</button>
+    <a href="/Students/Index">Cancel</a>
+</form>

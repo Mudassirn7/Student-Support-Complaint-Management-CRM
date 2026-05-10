@@ -1,0 +1,53 @@
+@page
+@model CRMProject.Pages.Complaints.IndexModel
+
+<div class="container mt-4">
+    <h2 class="mb-3" style="color: #00d4ff;">Complaints List</h2>
+    <a href="/Complaints/Create" class="btn btn-success mb-3">+ Add New Complaint</a>
+
+    <table class="table table-dark table-bordered table-hover text-center">
+        <thead style="background-color: #0f3460; color: #00d4ff;">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Student</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model.Complaints)
+            {
+                <tr>
+                    <td>@c.ComplaintId</td>
+                    <td>@c.Title</td>
+                    <td>
+                        @if (c.Status == "Pending")
+                        {
+                            <span class="badge bg-warning text-dark">Pending</span>
+                        }
+                        else if (c.Status == "Resolved")
+                        {
+                            <span class="badge bg-success">Resolved</span>
+                        }
+                        else if (c.Status == "In Progress")
+                        {
+                            <span class="badge bg-info text-dark">In Progress</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">@c.Status</span>
+                        }
+                    </td>
+                    <td>@c.StudentName</td>
+                    <td>@c.CategoryName</td>
+                    <td>
+                        <a href="/Complaints/Edit?id=@c.ComplaintId" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/Complaints/Delete?id=@c.ComplaintId" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

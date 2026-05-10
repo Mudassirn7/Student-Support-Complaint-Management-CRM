@@ -1,0 +1,19 @@
+@page
+@model CRMProject.Pages.Students.CreateModel
+<h2>Add Student</h2>
+<form method="post">
+    <label>Full Name</label><br />
+    <input asp-for="Student.FullName" /><br />
+    <label>Email</label><br />
+    <input asp-for="Student.Email" /><br />
+    <label>Roll Number</label><br />
+    <input asp-for="Student.RollNumber" /><br />
+    <label>Department</label><br />
+    <select asp-for="Student.DepartmentId">
+        @foreach (var d in Model.Departments)
+        {
+            <option value="@d.Key">@d.Value</option>
+        }
+    </select><br /><br />
+    <button type="submit">Save</button>
+</form>

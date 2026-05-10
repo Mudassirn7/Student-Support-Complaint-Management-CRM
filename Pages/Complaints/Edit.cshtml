@@ -1,0 +1,31 @@
+@page
+@model CRMProject.Pages.Complaints.EditModel
+<h2>Edit Complaint</h2>
+<form method="post">
+    <input type="hidden" asp-for="Complaint.ComplaintId" />
+    <label>Title</label><br />
+    <input asp-for="Complaint.Title" /><br />
+    <label>Description</label><br />
+    <textarea asp-for="Complaint.Description"></textarea><br />
+    <label>Status</label><br />
+    <select asp-for="Complaint.Status">
+        <option value="Pending">Pending</option>
+        <option value="Resolved">Resolved</option>
+        <option value="Rejected">Rejected</option>
+    </select><br />
+    <label>Student</label><br />
+    <select asp-for="Complaint.StudentId">
+        @foreach (var s in Model.Students)
+        {
+            <option value="@s.Key">@s.Value</option>
+        }
+    </select><br />
+    <label>Category</label><br />
+    <select asp-for="Complaint.CategoryId">
+        @foreach (var c in Model.Categories)
+        {
+            <option value="@c.Key">@c.Value</option>
+        }
+    </select><br /><br />
+    <button type="submit">Update</button>
+</form>
